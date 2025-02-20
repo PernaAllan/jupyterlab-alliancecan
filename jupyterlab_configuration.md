@@ -1,6 +1,6 @@
 # Accessing a Computing Cluster and Setting Up JupyterLab
 
-This tutorial provides step-by-step instructions for accessing a computing cluster, creating a virtual Python environment, installing JupyterLab, and using it interactively from your personal computer. It is designed for undergraduate and graduate students with limited experience in remote computing environments.
+This tutorial provides step-by-step instructions for accessing a computing cluster, creating a virtual Python environment, installing JupyterLab, and using it interactively from your personal computer. This tutorial was based on [Advanced Jupyter configuration](https://docs.alliancecan.ca/wiki/Advanced_Jupyter_configuration#Python_kernel ). Always check it for more instructions. 
 
 While this guide uses the user *aperna* and the cluster *narval* as examples, you should replace these with your own username and cluster name. Always refer to your institution's documentation for specific details.
 
@@ -9,8 +9,8 @@ While this guide uses the user *aperna* and the cluster *narval* as examples, yo
 To connect to a computing cluster, you need to use a terminal application. On Windows, you can use **PowerShell**. On macOS and Linux, the built-in terminal works perfectly.
 
 ### Step 1: Open the Terminal
-- **Windows:** Press `**Windows + R**`, type `**powershell**`, and hit `**Enter**`.
-- **macOS/Linux:** Open the terminal from the applications menu or use `**Ctrl + Alt + T**` (Linux).
+- **Windows:** Press `Windows + R`, type `powershell`, and hit `Enter`.
+- **macOS/Linux:** Open the terminal from the applications menu or use `Ctrl + Alt + T` (Linux).
 
 ### Step 2: Connect to the Cluster
 Use the following command, replacing `your_username` and `cluster_address` with your specific credentials and cluster address:
@@ -81,20 +81,15 @@ source $HOME/jupyter_py3/bin/activate
 <br>
 
 Once activated, your shell prompt will reflect the environment's name, as shown below:
-<div style="background-color: cyan; color: white; padding: 3px; border-radius: 0px; font-family: monospace;">
-<pre>
+```bash
 (jupyter_py3) [your_username@cluster ~]$
-</pre>
-</div>
+```
 
 instead of <br>
 
-<div style="background-color: cyan; color: white; padding: 3px; border-radius: 0px; font-family: monospace;">
-<pre>
+```bash
 [your_username@cluster ~]$
-</pre>
-</div>
-<br>
+```
 To deactivate the environment, simply run: `deactivate`. However, keep the environment activated for the next steps.
 
 ### Step 4: Install JupyterLab
