@@ -191,8 +191,11 @@ salloc --time=1:0:0 --ntasks=1 --cpus-per-task=2 --mem-per-cpu=1024M --account=d
 </pre>
 </div>
 
-- If you need to use a GPU, add the option `--gpus-per-node=1`.
-
+- If you need to use a GPU, add the option `--nodes=1` and `--gpus-per-node=1`.
+- I particularly like to use the following otions when using small datasets with tensorflow on jupyterlab:
+    ```bash
+    salloc --time=4:0:0 --nodes=1 --ntasks=1 --cpus-per-task=1 --mem-per-cpu=32G --gpus-per-node=1 --account=def-licciarc-ac srun $VIRTUAL_ENV/bin/jupyterlab.sh
+    ```
 💡 *Wait until access to the requested resources is granted. Once approved, JupyterLab will be launched on a compute node.*
 
 ---
